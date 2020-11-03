@@ -18,6 +18,10 @@ Using the same method as above, add a 3D Capsule and call it `Player`.
 
 To create a script in Unity you will need to right click the the section under the main screen where it shows you assets and then click `Create`, you will be given a drop down menu where there will be an option that says `C# Script`, click that to start create your script and name it `Player_Movement`
 
-Now this code will allow you to move using one of Unity's character controllers, but first you have to reference it, to do so, right above where it says `void Start` write out ``public CharacterController controller;``. This will reference the character controller that we will be using later down the line.
+Now this code will allow you to move using one of Unity's character controllers, but first you have to reference it, to do so, right above where it says `void Start` write out 
+```
+public CharacterController controller;
+``` 
+This will reference the character controller that we will be using later down the line.
 
 Press enter to make a new line and wright `public float speed = 12f;`, this tells Unity how fast you want your character to move, as the "12f" means "12 float", a float in Unity is a unit of numeric value that will be used to judge the speed of your chararacter.
