@@ -26,3 +26,24 @@ public CharacterController controller;
 public float speed = 12f;
 ``` 
 
+Next you will want to assign directions and keys for each direction you want your character to move in. 
+
+Since we will be using Unity’s character controller, you just reference the axis. To do this you write `float x = Input.GetAxis(“Horizontal”);`
+
+This allows you to left and right, as those directions are linked to the ‘X’ axis. 
+To move forward and backward, you write the same code as above, but replace the “float x” with a “float z” and (“Horizontal”); with (“Vertical”);
+
+Unity’s built in key binding have: A, d, left arrow key and right arrow key under “Horizontal”. Which is why we bound those keys for left and right movement.
+They also have the: W, s, up arrow key and down arrow key under “Vertical”. Which is why we bound those keys for forward and backward movement.
+
+Then write
+```
+`Vector3 move = transform.right * x + transform.forward * z;
+```
+
+`Vector3 move` is us telling Unity that we want the gameobject that this script is attached too to move in the axis we have referenced. “transform.right * x” and transform.forward * z” applies what we have written above.
+To finish off our script, we write
+```
+controller.SimpleMove(move * speed)
+```
+“Controller” is the type of function we are using. “SimpleMove” applies physics to our object while “move * speed” is just using the numerical amount we set our speed variable at as the movement speed of our character.
