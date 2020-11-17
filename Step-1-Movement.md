@@ -69,4 +69,4 @@ void Update()
 ```
 
 
-##3. Applying Our Script
+## 3. Applying Our Script
