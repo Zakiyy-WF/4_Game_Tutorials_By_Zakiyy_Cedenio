@@ -4,7 +4,7 @@ This shows how to make a movement script.
 
 Start off by creating a 3D Project as this tutorial will be using 3D dimensions and references
 
-## 1. Create a new scene
+## 1. Create a Scene
 
 Start by creaing a new scene called `Movement`.
 
