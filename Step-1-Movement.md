@@ -14,7 +14,7 @@ Then scale the cube up using the `Scale tool` by using the R key and then stretc
 
 Using the same method as above, add a 3D Capsule and call it `Player`.
 
-## 2. Create a script 
+## 2. Creating a script 
 
 To create a script in Unity you will need to right click the the section under the main screen where it shows your assets and then click `Create`, you will be given a drop down menu where there will be an option that says `C# Script`, click that to start create your script and name it `Player_Movement`
 
@@ -68,3 +68,5 @@ void Update()
     }
 ```
 
+
+##3 . Applying Our Script
