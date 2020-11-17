@@ -58,7 +58,6 @@ controller.SimpleMove(move * speed)
 void Update()
     {
 
-        //Gets inputs for both X and Z axis and sets them on WASD or arrow keys
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -70,3 +69,12 @@ void Update()
 
 
 ## 3. Applying Our Script
+
+Go back to Unity and drag your script to the player. Assuming you have no errors, you will see the name of the script, an empty box that says “controller” and a third one called speed.
+
+We need to fill in the middle box and to do that we scroll to the bottom of the ‘inspector tab’ to where we see `add component` click that and type in “Character controller” and click that to add it to your player.
+
+Now that you have the character controller, you can click and drag it into the empty box labelled “Controller” in your script and this will use Unity’s character controller in your script.
+Click play and you should be able to move forward, backward, left and right.
+
+Thank you for reading!
