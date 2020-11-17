@@ -70,7 +70,7 @@ void Update()
 
 ## 3. Applying Our Script
 
-Go back to Unity and drag your script to the player. Assuming you have no errors, you will see the name of the script, an empty box that says “controller” and a third one called speed.
+Go back to Unity and drag your script to the player. Assuming you have no errors, you will see the name of the script, an empty box that says “controller” and a third box called speed.
 
 We need to fill in the middle box and to do that we scroll to the bottom of the ‘inspector tab’ to where we see `add component` click that and type in “Character controller” and click that to add it to your player.
 
