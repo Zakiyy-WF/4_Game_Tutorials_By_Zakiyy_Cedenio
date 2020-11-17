@@ -12,7 +12,7 @@ You will need shapes in place of game objects and models, to find shapes, right 
 
 Then scale the cube up using the `Scale tool` by using the R key and then stretching the length and width of the cube with the blue and red boxes. Scale it up to a size you think is appropriate for your scene.
 
-Using the same method as above, add a 3D Capsule and call it `Player`.
+Using the same method as above, add a 3D Capsule and call it `Player`. Also to save some problems, tag your player with the "Player" in the capsules inspector tag.
 
 ## 2. Creating a script 
 
