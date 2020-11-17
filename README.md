@@ -1,1 +1,1 @@
-# 4 Steps for having a gate opening mechanic once all items off of your level are gone
+# 4 Mechanics that you can use in any game
