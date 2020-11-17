@@ -28,13 +28,20 @@ public float speed = 12f;
 
 Next you will want to assign directions and keys for each direction you want your character to move in. 
 
-Since we will be using Unity’s character controller, you just reference the axis. To do this you write `float x = Input.GetAxis(“Horizontal”);`
+Since we will be using Unity’s character controller, you just reference the axis. First go under `void Update() and inside the curly brackets write:
+```
+`float x = Input.GetAxis(“Horizontal”);`
+```
 
 This allows you to left and right, as those directions are linked to the ‘X’ axis. 
 To move forward and backward, you write the same code as above, but replace the “float x” with a “float z” and (“Horizontal”); with (“Vertical”);
 
 Unity’s built in key binding have: A, d, left arrow key and right arrow key under “Horizontal”. Which is why we bound those keys for left and right movement.
-They also have the: W, s, up arrow key and down arrow key under “Vertical”. Which is why we bound those keys for forward and backward movement.
+They also have the: W, s, up arrow key and down arrow key under “Vertical”. Which is why we bound those keys for forward and backward movement. You should have the below in your code.
+```
+ float x = Input.GetAxis("Horizontal");
+ float z = Input.GetAxis("Vertical");
+```
 
 Then write
 ```
@@ -46,4 +53,18 @@ To finish off our script, we write
 ```
 controller.SimpleMove(move * speed)
 ```
-“Controller” is the type of function we are using. “SimpleMove” applies physics to our object while “move * speed” is just using the numerical amount we set our speed variable at as the movement speed of our character.
+“Controller” is the type of function we are using. “SimpleMove” applies physics to our object while “move * speed” is just using the numerical amount we set our speed variable at as the movement speed of our character. Our finished script inside the update function should look like this
+```
+void Update()
+    {
+
+        //Gets inputs for both X and Z axis and sets them on WASD or arrow keys
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * x + transform.forward * z;
+
+        controller.SimpleMove(move * speed);
+    }
+```
+
