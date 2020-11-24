@@ -77,4 +77,5 @@ We need to fill in the middle box and to do that we scroll to the bottom of the 
 Now that you have the character controller, you can click and drag it into the empty box labelled “Controller” in your script and this will use Unity’s character controller in your script.
 Click play and you should be able to move forward, backward, left and right.
 
+This should have your character moving and affected by physics.
 Thank you for reading!
