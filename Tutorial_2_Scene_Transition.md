@@ -49,5 +49,6 @@ This will bring up a menu that will show you how to make a exportable build of y
 The is a button on this menu that says “Add Open Scenes” which will include the scene you are on in the table. 
 Unity starts counting things from zero, which means your starting scene will be zero in the build index and your second scene will one which is why we specified to load scene one rather than two.
 From there, it you should be able to play your scene, move your character to your transition point and you should transition to your next scene without any problem.
+
 Thanks for reading!
 
