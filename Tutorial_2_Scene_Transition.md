@@ -28,7 +28,7 @@ Inside those curly brackets write
 ```
 Scene.Manager.LoadScene(1);
 ```
-“Scene.Manger” references the UnityEngine that we added at the top of the script
+“Scene.Manager” references the UnityEngine that we added at the top of the script
 “LoadScene(1);” Is telling Unity what scene to load using the built setting within unity.
 Your full code should look like this
 ```
