@@ -10,7 +10,7 @@ From there, move the sphere to a place where you want the transition to happen a
 
 ## 2. Create your script
 
-Right click inside the box where your assets are and create a “Scrips” folder for all your further scripts. Double click inside that folder and right click to create your new script, call this script `SceneTransition` and double click it to open the script.
+Right click inside the box where your assets are and create a “Scripts” folder for all your further scripts. Double click inside that folder and right click to create your new script, call this script `SceneTransition` and double click it to open the script.
 Once you’ve opened the script, you’ll need to add a different Unity Engine in order to switch between your scenes, underneath your last Unity engine at the top of your script write in `using UnityEngine.SceneManagement;` which will prep your script for scene transitions.
 You will not be needing `void Start()` or `void update()` so either delete them or leave them.
 Press under a few times to give you space under the second }/Curly bracket and write 
