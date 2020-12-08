@@ -2,7 +2,7 @@
 
 This tutorial will show how to set up a hazard that will restart the scene you are on if the player runs into it, a "Game Over" function.
 
-This tutorial requires you to have read my other tutorial teaching you how to get your character moving or having your own movement method. You will need to have an open scene as well.
+This tutorial requires you to have read my other tutorial teaching you how to get your character moving as the code responds to Unity's character controller,
 
 ## 1. Setting up your Hazards
 
