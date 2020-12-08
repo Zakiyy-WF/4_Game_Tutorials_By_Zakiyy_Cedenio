@@ -2,7 +2,7 @@
 
 This tutorial will show you how to switch to a different scene if your players walks into another object.
 
-This tutorial requires you to have read other tutorial teaching you how to get your character moving or having your own movement method.
+This tutorial requires you to have read my other tutorial teaching you how to get your character moving or having your own movement method.
 
 ## 1. Creating your transition object
 
