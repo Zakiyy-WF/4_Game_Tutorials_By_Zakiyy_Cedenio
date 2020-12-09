@@ -23,8 +23,9 @@ To make your reset script you will need to reference your controller’s collide
 
 ```
 void OnControllerColliderHit(ControllerColliderHit hit)
-{
-}
+	{
+	
+	}
 ```
 
 This will reference the character controller’s collider as Unity’s character controller has its own collider separate to your game objects collider. 
@@ -33,6 +34,7 @@ Inside the curly brackets, we will need to check if the player has hit the hazar
 ```
 if (hit.gameObject.tag == "Hazard")
 	{
+	
 	}
 ```
 
