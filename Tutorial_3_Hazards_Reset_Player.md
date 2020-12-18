@@ -64,3 +64,4 @@ Now that we have all the script ready, we will need to add your scene to the bui
 Go to file at the top left of Unity where it says “File” and scroll down to where it says “Build Settings” and click that. This will bring up a menu that will show you how to make a exportable build of your game, specifying the dimensions and platform, for now, we just want to add our scene to the “Scenes In build” table. The is a button on this menu that says “Add Open Scenes” which will include the scene you are on in the table. 
 Now if you play your scene if you run into the hazard, the scene should reset and your character should be back at his starting position.
 
+Thanks for reading.
