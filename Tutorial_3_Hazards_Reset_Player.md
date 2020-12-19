@@ -1,4 +1,4 @@
-# Hazard kills kill player
+# Making a Deadly Hazard
 
 This tutorial will show how to set up a hazard that will restart the scene you are on if the player runs into it, a "Game Over" function.
 
