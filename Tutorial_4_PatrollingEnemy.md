@@ -78,7 +78,7 @@ Patrol();
 ```
 
 
-## 3. Attached everything in the Inspector Tab
+## 3. Attach everything in the Inspector Tab
 
 In the AI’s Inspector tab, you will see `Waypoints` and `size`, you will want to set the size to 2 as that is how many waypoints you currently have in your scene. This will create two extra boxes called “Element 0” and “Element 1” as Unity counts from zero first. 
 Drag each waypoint to the boxes depends on the order you want your AI to travel in.
