@@ -47,6 +47,12 @@ Did not have consistent capitalisation in my coding which gave me compile errors
 10/11/2020
 
 Set a trigger for if the player collides with the enemy, game will reset.
+```
+ if (other.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
+        }
+```
 
 
 11/11/2020
@@ -58,6 +64,25 @@ Encountered another problem where if the enemy lost sight of the player he would
 24/11/2020
 
 Made a quit button and start button with coresponding scrips that works, small issue with the camera change making the mouse invisiable but not an issue.
+```
+   public static bool InMainMenu = false;
+
+    
+
+    public void playGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        InMainMenu = false;
+        ToCredits.InCredits = false;
+    }
+
+    public void quitGame()
+        {
+            Application.Quit();
+        }
+```
 
 
 2/12/2020
@@ -75,7 +100,10 @@ Issues with my enemy patrol script occuered when the second enemy reached a wayp
 
 12/1/2021
 
-Made a pause menu scirpt that would freeze the game when paused and unfreezed it when resume was hit.
+Made a pause menu scirpt that would freeze the game when paused and unfreezed it when resume was hit. I used timescale to freeze the game.
+```
+Time.timeScale = 0f;
+```
 
 
 18/1/2021
@@ -86,3 +114,85 @@ Bound the walking animations to W/A/S/D and made it so that animation wouldn't p
 21/1/2021
 
 Had an issue with my pause and main menu, my game binds the mouse and the look function, so my character would turn with the mouse, now when the game was paused, the mouse would still be gone, this would stop me from using my pause menu, got some help on how to fix it.
+```
+ public class Start_Game : MonoBehaviour
+{ 
+    public static bool InMainMenu = false;
+
+    
+
+    public void playGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        InMainMenu = false;
+        ToCredits.InCredits = false;
+    }
+    
+}
+    public class PauseMenu : MonoBehaviour
+{
+    public static bool GameIsPaused = false;
+
+    public GameObject pauseMenuUI;
+
+    public GameObject Minimap;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        Minimap.SetActive(true);
+    }
+
+    void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        Minimap.SetActive(false);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+        Minimap.SetActive(true);
+        pauseMenuUI.SetActive(false);
+        GameIsPaused = false;
+        Start_Game.InMainMenu = true;
+        ToCredits.InCredits = true;
+    }
+}
+
+public class ToCredits : MonoBehaviour
+{
+    public static bool InCredits = false;
+    
+     void OnTriggerEnter(Collider other)
+    {
+        SceneManager.LoadScene(3);
+        InCredits = true;
+    }
+
+
+}
+```
